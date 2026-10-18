@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 using static UnityEngine.Rendering.DebugUI;
 
-public class CanvasManager : MonoBehaviour
+public class UIManager : MonoBehaviour
 {
 
     // FUNCIONES DEL MENU
@@ -10,12 +10,10 @@ public class CanvasManager : MonoBehaviour
     public void Play()
     {
         Time.timeScale = 1f;
-        SceneManager.LoadScene("Game");
+        SceneManager.LoadScene("Scene1");
     }
 
     public GameObject panelCredits;
-
-    public GameObject panelSettings;
 
     public void OpenCreditsPanel()
     {
@@ -27,15 +25,6 @@ public class CanvasManager : MonoBehaviour
         panelCredits.SetActive(false);
     }
 
-    public void OpenSettingsPanel()
-    {
-        panelSettings.SetActive(true);
-    }
-
-    public void CloseSettingsPanel()
-    {
-        panelSettings.SetActive(false);
-    }
 
     //FUNCIONES DEL JUEGO
 
